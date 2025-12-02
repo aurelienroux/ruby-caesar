@@ -1,18 +1,16 @@
 
 def main(string, shift)
   alphabet = ("a".."z").to_a
-  result = []
-
-  string.each_char { |char|
+  result = string.each_char.map do |char|
     if(char == " ")
-      result << " "
+      char
     else
       current_index = alphabet.index(char.downcase)
       new_index = (current_index + shift) % 26
 
-      result << alphabet[new_index]
+      alphabet[new_index]
     end
-  }
+  end
 
   print result.join()
 end
