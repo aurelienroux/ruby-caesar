@@ -4,10 +4,20 @@ def main(string, shift)
   result = []
 
   string.each_char { |char|
-    current_index = alphabet.index(char)
-    result<< [alphabet[current_index + shift]]
+    if(char == " ")
+      result<< [" "]
+    else
+      current_index = alphabet.index(char)
+
+      if current_index + shift > 25
+        current_index -= 26
+      end
+
+      result<< [alphabet[current_index + shift]]
+    end
   }
+
   print result.join()
 end
 
-main("bac", 1)
+main("abc def", 25)
