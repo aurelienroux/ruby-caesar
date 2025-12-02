@@ -5,7 +5,7 @@ def main(string, shift)
 
   string.each_char { |char|
     if(char == " ")
-      result<< [" "]
+      result << " "
     else
       current_index = alphabet.index(char)
 
@@ -13,7 +13,7 @@ def main(string, shift)
         current_index -= 26
       end
 
-      result<< [alphabet[current_index + shift]]
+      result << alphabet[current_index + shift]
     end
   }
 
