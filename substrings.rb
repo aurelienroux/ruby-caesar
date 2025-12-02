@@ -21,4 +21,4 @@ end
 
 # puts substrings("below", dictionary)
 # puts substrings("own", dictionary)
-# puts substrings("Howdy partner, sit down! How's it going?", dictionary)
+puts substrings("Howdy partner, sit down! How's it going?", dictionary)
