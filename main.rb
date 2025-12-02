@@ -7,7 +7,7 @@ def main(string, shift)
     if(char == " ")
       result << " "
     else
-      current_index = alphabet.index(char)
+      current_index = alphabet.index(char.downcase)
       new_index = (current_index + shift) % 26
 
       result << alphabet[new_index]
@@ -17,4 +17,4 @@ def main(string, shift)
   print result.join()
 end
 
-main("abc def", 25)
+main("Abc def", 25)
