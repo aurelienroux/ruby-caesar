@@ -8,12 +8,9 @@ def main(string, shift)
       result << " "
     else
       current_index = alphabet.index(char)
+      new_index = (current_index + shift) % 26
 
-      if current_index + shift > 25
-        current_index -= 26
-      end
-
-      result << alphabet[current_index + shift]
+      result << alphabet[new_index]
     end
   }
 
