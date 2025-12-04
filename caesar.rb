@@ -1,8 +1,7 @@
-
 def main(string, shift)
   alphabet = ("a".."z").to_a
   result = string.chars.map do |char|
-    if(char =~ /[a-zA-Z]/)
+    if /[a-zA-Z]/.match?(char)
       current_index = alphabet.index(char.downcase)
       new_index = (current_index + shift) % 26
       alphabet[new_index]
@@ -11,7 +10,7 @@ def main(string, shift)
     end
   end
 
-  print result.join()
+  print result.join
 end
 
 main("Abc!111def", 25)

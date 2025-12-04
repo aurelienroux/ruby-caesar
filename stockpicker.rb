@@ -26,7 +26,7 @@ def stockpicker prices_array
     end
   }
 
-  print [best_sell_day,best_buy_day]
+  print [best_sell_day, best_buy_day]
 end
 
-stockpicker([17,3,6,9,15,8,6,1,10])
+stockpicker([17, 3, 6, 9, 15, 8, 6, 1, 10])

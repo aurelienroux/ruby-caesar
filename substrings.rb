@@ -3,20 +3,20 @@
 # It should return a hash listing each substring (case insensitive) that was
 # found in the original string and how many times it was found.
 
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+dictionary = ["below", "down", "go", "going", "horn", "how", "howdy", "it", "i", "low", "own", "part", "partner", "sit"]
 
-def substrings (sentence, dictionnary)
-  result = Hash.new()
+def substrings(sentence, dictionnary)
+  result = {}
 
   sentence.scan(/[a-zA-Z]+/) { |word|
     dictionnary.each do |w|
       if word.downcase.include?(w)
-        result[w] =+ 1
+        result[w] = + 1
       end
     end
   }
 
-  return result
+  result
 end
 
 # puts substrings("below", dictionary)
